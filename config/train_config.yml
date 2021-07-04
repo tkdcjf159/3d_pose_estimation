@@ -1,0 +1,71 @@
+SEED:
+  random_seed: 42
+
+DATALOADER:
+  num_workers: 4 
+  shuffle: true
+  pin_memory: false
+  drop_last: true
+
+TRAIN:
+  num_epochs: 16
+  batch_size: 8
+  learning_rate: 0.001
+  early_stopping_patience: 20
+  model: POSENET
+  optimizer:
+  scheduler:
+  momentum:
+  weight_decay: 0.000003
+  loss_function:
+  metric_function:
+  input_shape: 128
+  output_shape: 128
+  output_depth: 400
+  resnet_type: 18
+  model_type: 2d_img_heatmap
+  patch_size: 512
+  embed_dim : 512
+  depth : 8
+  num_heads : 8
+  mlp_ratio : 2
+  coord : joint_2d
+
+TEST:
+  num_epochs: 1
+  batch_size: 1
+  model: POSENET
+  metric_function:
+  input_shape: 128
+  output_shape: 128
+  output_depth: 400
+  resnet_type: 18
+  model_type: 2d_img_heatmap
+  patch_size: 512
+  embed_dim : 512
+  depth : 8
+  num_heads : 8
+  mlp_ratio : 2
+  coord : joint_2d
+
+
+PERFORMANCE_RECORD:
+  column_list:
+    - train_serial
+    - train_timestamp
+    - model_str
+    - optimizer_str
+    - loss_function_str
+    - metric_function_str
+    - early_stopping_patience
+    - batch_size
+    - epoch
+    - learning_rate
+    - momentum
+    - random_seed # -----------key columns-------------
+    - epoch_index 
+    - train_loss
+    - validation_loss
+    - train_score
+    - validation_score
+    - elapsed_time
