@@ -1,6 +1,6 @@
 # Overview
 
-## 3D pose estimation
+## 2D pose estimation
 - 아래 그림처럼 2d pose estimation을 위한 keypoint를 표현하는 방법이 여러가지 입니다. 이번 대회에서는 SMPL body joint를 예측하는 문제 입니다.
 ![](https://github.com/hongsukchoi/Pose2Mesh_RELEASE/blob/master/asset/joint_sets.png)
 
