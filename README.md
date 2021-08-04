@@ -36,7 +36,7 @@
 - Object detection (사람 영역 추출) + SMPL body joint (keypoint 좌표 추출) + 3d 좌표 계산을 할 수 있는 pretrained model이 무엇이 있을지 집중해서 찾았습니다.
 - 최종적으로 우리가 썼던 [metrabs](https://github.com/isarandi/metrabs)는 이를 제공하는 모델임을 확인하였고 이를 활용해서 학습을 하기로 결정했습니다.
 - 사용한 모델은 대회측에서 제공한 base model인 posenet을 그대로 사용하였습니다. 
-- 기본적으로 3d pose estimation에서 소실된 거리와 회전 정보를 처음부터 복원을 했다면 결과가 좋지 않았을 텐데, 데이터 분석을 통해 적합한 pretrained model 선정 및 예측 정보의 간소화를 통해 예측범위를 축소한 것이 이번 문제 해결의 키포인트 였습니다.
+- 기본적으로 3d pose estimation에서 소실된 거리와 회전 정보를 처음부터 복원을 했다면 결과가 좋지 않았을 텐데, **데이터 분석을 통해 적합한 pretrained model 선정 및 예측 정보의 간소화를 통해 예측범위를 축소한 것이 이번 문제 해결의 키포인트** 였습니다.
    
 # HOW TO Train and Predict
 
